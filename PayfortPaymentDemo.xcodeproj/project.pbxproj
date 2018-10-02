@@ -13,6 +13,11 @@
 		0304A8902163458E00F89270 /* PayfortPaymentDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0304A88E2163458E00F89270 /* PayfortPaymentDemo.xcdatamodeld */; };
 		0304A8922163459000F89270 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0304A8912163459000F89270 /* Assets.xcassets */; };
 		0304A8952163459000F89270 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0304A8932163459000F89270 /* LaunchScreen.storyboard */; };
+		0304A8AA216348CC00F89270 /* PayfortMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304A8A9216348CC00F89270 /* PayfortMode.swift */; };
+		0304A8AD2163504500F89270 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304A8AC2163504500F89270 /* StringExtension.swift */; };
+		0304A8AF2163643C00F89270 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304A8AE2163643B00F89270 /* Constant.swift */; };
+		0304A8BA21638B3500F89270 /* PayFortSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0304A8B821638B3500F89270 /* PayFortSDK.bundle */; };
+		0304A8BB21638B3500F89270 /* PayFortSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0304A8B921638B3500F89270 /* PayFortSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,13 @@
 		0304A8912163459000F89270 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0304A8942163459000F89270 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0304A8962163459000F89270 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0304A8A82163470F00F89270 /* BridgingHeaderFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeaderFile.h; sourceTree = "<group>"; };
+		0304A8A9216348CC00F89270 /* PayfortMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayfortMode.swift; sourceTree = "<group>"; };
+		0304A8AC2163504500F89270 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		0304A8AE2163643B00F89270 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		0304A8B821638B3500F89270 /* PayFortSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PayFortSDK.bundle; sourceTree = "<group>"; };
+		0304A8B921638B3500F89270 /* PayFortSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PayFortSDK.framework; sourceTree = "<group>"; };
+		0304A8BC21638ED300F89270 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0304A8BB21638B3500F89270 /* PayFortSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +53,7 @@
 		0304A87B2163458E00F89270 = {
 			isa = PBXGroup;
 			children = (
+				0304A8BC21638ED300F89270 /* README.md */,
 				0304A8862163458E00F89270 /* PayfortPaymentDemo */,
 				0304A8852163458E00F89270 /* Products */,
 			);
@@ -56,15 +70,93 @@
 		0304A8862163458E00F89270 /* PayfortPaymentDemo */ = {
 			isa = PBXGroup;
 			children = (
-				0304A8872163458E00F89270 /* AppDelegate.swift */,
-				0304A8892163458E00F89270 /* ViewController.swift */,
-				0304A88B2163458E00F89270 /* Main.storyboard */,
-				0304A8912163459000F89270 /* Assets.xcassets */,
-				0304A8932163459000F89270 /* LaunchScreen.storyboard */,
-				0304A8962163459000F89270 /* Info.plist */,
-				0304A88E2163458E00F89270 /* PayfortPaymentDemo.xcdatamodeld */,
+				0304A8A0216345BB00F89270 /* Models */,
+				0304A89E216345A700F89270 /* Assest */,
+				0304A89D2163459F00F89270 /* Storyboards */,
+				0304A89C2163459600F89270 /* Classes */,
+				0304A8A2216345DA00F89270 /* OtherClasses */,
+				0304A89F216345B200F89270 /* Resources */,
 			);
 			path = PayfortPaymentDemo;
+			sourceTree = "<group>";
+		};
+		0304A89C2163459600F89270 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0304A8872163458E00F89270 /* AppDelegate.swift */,
+				0304A8892163458E00F89270 /* ViewController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0304A89D2163459F00F89270 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0304A88B2163458E00F89270 /* Main.storyboard */,
+				0304A8932163459000F89270 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0304A89E216345A700F89270 /* Assest */ = {
+			isa = PBXGroup;
+			children = (
+				0304A8912163459000F89270 /* Assets.xcassets */,
+			);
+			path = Assest;
+			sourceTree = "<group>";
+		};
+		0304A89F216345B200F89270 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0304A8A3216345EC00F89270 /* Payfort */,
+				0304A8A82163470F00F89270 /* BridgingHeaderFile.h */,
+				0304A8962163459000F89270 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0304A8A0216345BB00F89270 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0304A8A1216345C200F89270 /* CoreData */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0304A8A1216345C200F89270 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0304A88E2163458E00F89270 /* PayfortPaymentDemo.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		0304A8A2216345DA00F89270 /* OtherClasses */ = {
+			isa = PBXGroup;
+			children = (
+				0304A8A9216348CC00F89270 /* PayfortMode.swift */,
+				0304A8AE2163643B00F89270 /* Constant.swift */,
+				0304A8AB2163503300F89270 /* Extensions */,
+			);
+			path = OtherClasses;
+			sourceTree = "<group>";
+		};
+		0304A8A3216345EC00F89270 /* Payfort */ = {
+			isa = PBXGroup;
+			children = (
+				0304A8B821638B3500F89270 /* PayFortSDK.bundle */,
+				0304A8B921638B3500F89270 /* PayFortSDK.framework */,
+			);
+			path = Payfort;
+			sourceTree = "<group>";
+		};
+		0304A8AB2163503300F89270 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0304A8AC2163504500F89270 /* StringExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0304A8BA21638B3500F89270 /* PayFortSDK.bundle in Resources */,
 				0304A8952163459000F89270 /* LaunchScreen.storyboard in Resources */,
 				0304A8922163459000F89270 /* Assets.xcassets in Resources */,
 				0304A88D2163458E00F89270 /* Main.storyboard in Resources */,
@@ -140,7 +233,10 @@
 			files = (
 				0304A8902163458E00F89270 /* PayfortPaymentDemo.xcdatamodeld in Sources */,
 				0304A88A2163458E00F89270 /* ViewController.swift in Sources */,
+				0304A8AD2163504500F89270 /* StringExtension.swift in Sources */,
+				0304A8AA216348CC00F89270 /* PayfortMode.swift in Sources */,
 				0304A8882163458E00F89270 /* AppDelegate.swift in Sources */,
+				0304A8AF2163643C00F89270 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,14 +382,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PayfortPaymentDemo/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PayfortPaymentDemo/Resources/Payfort",
+					"$(PROJECT_DIR)/PayfortPaymentDemo",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/PayfortPaymentDemo/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yudiz.PayfortPaymentDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = PayfortPaymentDemo/Resources/BridgingHeaderFile.h;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -303,14 +409,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PayfortPaymentDemo/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PayfortPaymentDemo/Resources/Payfort",
+					"$(PROJECT_DIR)/PayfortPaymentDemo",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/PayfortPaymentDemo/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yudiz.PayfortPaymentDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = PayfortPaymentDemo/Resources/BridgingHeaderFile.h;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
